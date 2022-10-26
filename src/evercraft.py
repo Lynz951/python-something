@@ -17,6 +17,7 @@ class Character():
         self.wisdom = 10
         self.intelligence = 10
         self.charisma = 10
+        self.experience_points = 0
 
     def modify_roll(self, roll, modifier):
         return roll + modifier
@@ -29,11 +30,13 @@ class Character():
             opponent.damage_points = opponent.damage_points * 2
             self.armor = self.armor + Character.modifiers[self.dexterity+1]
             self.hit_points = self.hit_points + Character.modifiers[self.constitution+1]
+            self.experience_points = self.experience_points +10
             return "hit"
         if modified_roll > armor or modified_roll >= 20:
             opponent.damage_points = opponent.damage_points + 1
             self.armor = self.armor + Character.modifiers[self.dexterity+1]
             self.hit_points = self.hit_points + Character.modifiers[self.constitution+1]
+            self.experience_points = self.experience_points +10
             return "hit"
        
 

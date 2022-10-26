@@ -146,5 +146,15 @@ def test_hp_equals_hp_plus_const_mod():
     char1.attack(15, 4, char2)
     assert char1.hit_points == old_hp + char1.modifiers[char1.constitution+1]
 
+def test_character_has_experience_points():
+    char1 = Character("Fred", "Neutral")
+    assert char1.experience_points != None
+
+def test_character_experience_points_increase():
+    char1 = Character("Larry", "Good")
+    char2 = Character("Bob", "Neutral")
+    char1.experience_points = 0
+    char1.attack(15, 4, char2)
+    assert char1.experience_points == 10
 
 

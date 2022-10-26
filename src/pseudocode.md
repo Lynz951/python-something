@@ -95,8 +95,8 @@
     - As a character I want to accumulate experience points (xp) when I attack my enemies so that I can earn bragging rights at the tavern
 
     - Tests:
-        - Character() has experience_points attribute
-        - If Character.attack() successful, Character.experience_points = +10
+        - X Character() has experience_points attribute
+        - X If Character.attack() successful, Character.experience_points = +10
 
 - Feature: A Character Can Level
     - As a character I want my experience points to increase my level and combat capabilities so that I can bring vengeance to my foes
