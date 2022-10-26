@@ -88,8 +88,8 @@
         - X Character.attack() if successful --> minimum damage = 1
         - X Character.attack() ---> Add strength modifier to roll and damage dealt (Revisit)
         - X If Character.attack roll = 20, add 2x strength modifier
-        - Character.armor = Character.armor + dexterity modifier
-        - Character.hit_points = Character.hit_points + constitution modifier
+        - X Character.armor = Character.armor + dexterity modifier
+        - X Character.hit_points = Character.hit_points + constitution modifier
 
 - Feature: A Character can gain experience when attacking
     - As a character I want to accumulate experience points (xp) when I attack my enemies so that I can earn bragging rights at the tavern

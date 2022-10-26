@@ -27,9 +27,13 @@ class Character():
             self.is_alive = False
         if modified_roll >= 20:
             opponent.damage_points = opponent.damage_points * 2
+            self.armor = self.armor + Character.modifiers[self.dexterity+1]
+            self.hit_points = self.hit_points + Character.modifiers[self.constitution+1]
             return "hit"
         if modified_roll > armor or modified_roll >= 20:
             opponent.damage_points = opponent.damage_points + 1
+            self.armor = self.armor + Character.modifiers[self.dexterity+1]
+            self.hit_points = self.hit_points + Character.modifiers[self.constitution+1]
             return "hit"
        
 

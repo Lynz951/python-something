@@ -134,7 +134,17 @@ def test_rolled_num_gets_modifier():
 
 def test_armor_equals_armor_plus_dexterity_mod():
     char1 = Character("Larry", "Good")
-    char1.armor = char1.armor + (char1.dexterity + )
+    char2 = Character("Bob", "Neutral")
+    old_armor = char1.armor
+    char1.attack(15, 4, char2)
+    assert char1.armor == old_armor + char1.modifiers[char1.dexterity+1]
+
+def test_hp_equals_hp_plus_const_mod():
+    char1 = Character("Larry", "Good")
+    char2 = Character("Bob", "Neutral")
+    old_hp = char1.hit_points
+    char1.attack(15, 4, char2)
+    assert char1.hit_points == old_hp + char1.modifiers[char1.constitution+1]
 
 
 
