@@ -74,6 +74,7 @@ class Fighter(Character):
         self.level_roll_modifier = self.level
 
 class Rogue(Character):
+    
     def __init__(self, name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in):
         super().__init__(name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in)
         self.alignment = ['Neutral', 'Evil']
@@ -83,11 +84,9 @@ class Monk(Character):
         super().__init__(name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in)
 
 class Paladin(Character):
-    self.alignment = ['Good']
     def __init__(self, name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in):
         super().__init__(name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in)
-       
-
+        self.alignment = ['Good']
    
 char1 = Character('George', 'Neutral', 3, 5, 10, True, 10, 12, 10, 10, 10, 10, 0, 1)
 char2 = Character('Fred', 'Good', 10, 5, 10, True, 10, 10, 10, 10, 10, 10, 0, 1)
