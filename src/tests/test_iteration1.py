@@ -16,7 +16,7 @@ def test_character_alignment():
 
 def test_character_alignment_set():
     char1 = Character("Larry", "Good", 5,5,5,5,5,5,5,5,5,5,5,5)
-    assert char1.alignment == "Good"
+    assert char1.alignment != "Evil" and char1.alignment != "Neutral"
 
 def test_character_alignment_values():
     char1 = Character("Larry", "Good",5,5,5,5,5,5,5,5,5,5,5,5)

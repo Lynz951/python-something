@@ -52,3 +52,11 @@ def test_monk_does_3_plus_damage():
     char1 = Character('George', 'Neutral', 3, 5, 10, True, 10, 12, 10, 10, 10, 10, 0, 1) 
     char3.attack(5, 3, char1)
     assert char1.damage_points == 13
+
+def test_paladin_only_good():
+    assert Paladin.alignment != "Evil" 
+
+def test_paladin_has_level_roll_modifer_of_1():
+    char3 = Paladin("Fred", "Good", 5,5,5,5,5,5,5,5,5,5,5,1)
+    char3.level = 1
+    assert char3.level_roll_modifier == 1

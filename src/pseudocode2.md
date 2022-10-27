@@ -40,5 +40,5 @@ Feature: As a player I want to play a Paladin so that I can smite evil, write wr
         - X has 8 hit points per level instead of 5
         - +2 to attack and damage when attacking Evil characters
         - does triple damage when critting on an Evil character (i.e. add the +2 bonus for a regular attack, and then triple that)
-        - attacks roll is increased by 1 for every level instead of every other level
-        - can only have Good alignment
+        - X attacks roll is increased by 1 for every level instead of every other level
+        - X can only have Good alignment
