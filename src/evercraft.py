@@ -21,6 +21,18 @@ class Character():
         self.experience_points = experience_points_in
         self.level = level_in
         self.level_roll_modifier = self.level // 2
+        self.race = 'Human'
+
+    def is_an_orc(self):
+        self.strength = self.strength + 2
+        self.intelligence = self.intelligence - 1
+        self.wisdom = self.wisdom - 1
+        self.charisma = self.charisma -1
+        self.armor = self.armor + 2
+        self.race = "Orc"
+
+    def is_a_dwarf(self):
+        self.constitution = self.constitution + 1
 
     def modify_roll(self, roll, modifier):
         if roll == 20:
