@@ -3,6 +3,7 @@
 
 class Character():
     modifiers = [-5,-4,-4,-3,-3,-2,-2,-1,-1,0,0,1,1,2,2,3,3,4,4,5]
+    alignment = ['Good', 'Neutral', 'Evil']
 
     def __init__ (self, name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in):
         self.name = name_in
@@ -48,8 +49,15 @@ class Character():
     def level_up(self):
         self.level += 1
         self.hit_points = self.hit_points + 5 + self.modifiers[self.constitution+1]
-        # if self.level % 2 == 0:
-        #     self.even_level_bonus = True
+
+
+class Fighter(Character):
+    def __init__(self, name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in):
+        super().__init__(name_in, alignment_in, armor_in, hit_points_in, damage_points_in, is_alive_in, strength_in, dexterity_in, constitution_in, wisdom_in, intelligence_in, charisma_in, experience_points_in, level_in)
+        self.level_roll_modifier = self.level
+    def level_up(self):
+        self.level += 1
+        self.hit_points = self.hit_points + 10 + self.modifiers[self.constitution+1]
 
 char1 = Character('George', 'Neutral', 10, 5, 0, True, 10, 10, 10, 10, 10, 10, 0, 1)
 char2 = Character('Fred', 'Good', 10, 5, 0, True, 10, 10, 10, 10, 10, 10, 0, 1)
