@@ -102,18 +102,11 @@
     - As a character I want my experience points to increase my level and combat capabilities so that I can bring vengeance to my foes
 
     - Tests:
-        - Character() has a level attribute
-        - Character.level = 1 (default)
-        - Every time Character.experience_points increases by 1000, Character.level = +1
-        - Every time Character.experience_points increases by 1000, Character.hit_points = +5 + .constitution_modifier
-        - Every time Character.experience_points increases by 1000, Character.attack(roll) = +1
+        - X Character() has a level attribute
+        - X Character.level = 1 (default)
+        - X Every time Character.experience_points increases by 1000, Character.level = +1
+        - X Every time Character.experience_points increases by 1000, Character.hit_points = +5 + .constitution_modifier
+        - X 1 is added to attack roll for every even level achieved
+        
 
-            Level defaults to 1
-            After 1000 experience points, the character gains a level
-            0 xp -> 1st Level
-            1000 xp -> 2nd Level
-            2000 xp -> 3rd Level
-            etc.
-            For each level:
-            hit points increase by 5 plus Con modifier
-            1 is added to attack roll for every even level achieved
+         
